@@ -59,5 +59,14 @@ app.post('/restaurantes', function (req, res) {
 });
 
 app.get('/listadoRestaurantes', function (req, res) {
-  res.render('listadoRestaurantes');
+  // var db = mongoClient.db("RestaurantDB");
+  // results = db.collection("Restaurant").find().toArray();
+  // res.render('listadoRestaurantes', results )
+
+      var dbo = mongoClient.db("RestaurantDB");
+      dbo.collection("Restaurant").find().toArray(function(err, results){
+        res.render("listadoRestaurantes", { result: results });
+      });
+
+
 });

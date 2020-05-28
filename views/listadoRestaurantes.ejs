@@ -3,8 +3,39 @@
   <head>
   	<title>lista restaurantes</title>
   </head>
+  <style media="screen">
+    table{
+      text-align: center;
+    }
+    th, td{
+      border-bottom: 1px solid #000;
+    }
+    th{
+      width: 200px;
+    }
+  </style>
   <body>
 
+    <h4>RESTAURANTES</h4>
+
+    <table>
+        <tr>
+          <th>NOMBRE</th>
+          <th>POBLACION</th>
+          <th>TELEFONO</th>
+          <th>CODIGO POSTAL</th>
+        </tr>
+    		<% for(var i=0; i < result.length; i++) { %>
+    		   <tr>
+    		    	<td><%= result[i].name %></td>
+              <td><%= result[i].location %></td>
+              <td><%= result[i].pnumber %></td>
+              <td><%= result[i].cp %></td>
+    		   </tr>
+    		<% } %>
+	  </table>
+
+    <br><br>
 
     <a href="/restaurantes">Añadir restaurantes</a> <br>
     <a href="/">Voler</a> <br>
