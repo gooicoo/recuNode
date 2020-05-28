@@ -33,7 +33,7 @@ mongo.connect( dbConStr, function( err, _client ) {
 
 
 app.get('', function (req, res) {
-    res.render('restaurantes')
+    res.render('selecOpcion')
 });
 
 app.get('/restaurantes', function (req, res) {
@@ -56,4 +56,8 @@ app.post('/restaurantes', function (req, res) {
         res.render("result",{msg:"restSiAdd"});
     }
   });
+});
+
+app.get('/listadoRestaurantes', function (req, res) {
+  res.render('listadoRestaurantes');
 });
