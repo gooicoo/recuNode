@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title></title>
+  </head>
+  <body>
+    	<% if (msg=="restSiAdd"){ %>
+    	   <p>Restaurante añadido en la BBDD</p>
+    	<%}else if(msg="restNoAdd"){%>
+    	   <p>ERROR: No se puede insertar</p>
+      <%}%>
+
+      <a href="/restaurantes">Añadir otro restaurantes</a> <br>
+      <a href="/listadoRestaurantes">Ver restaurantes</a> <br>
+
+  </body>
+</html>
